@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/news_image_group"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageNews"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/place_holder" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/timeNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/avenir_medium"
+        android:textColor="@color/textSecondaryColor"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="@id/news_image_group"
+        app:layout_constraintTop_toBottomOf="@id/news_image_group"
+        tools:text="02 Sep 2019" />
+
+    <ImageButton
+        android:id="@+id/moreTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="?selectableItemBackground"
+        android:src="@drawable/ic_more"
+        android:visibility="invisible"
+        app:layout_constraintRight_toRightOf="@id/news_image_group"
+        app:layout_constraintTop_toBottomOf="@id/news_image_group" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/titleNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="36dp"
+        android:fontFamily="@font/avenir_demi"
+        android:lines="2"
+        android:maxLines="2"
+        android:textColor="@color/primary_text_color"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="@id/news_image_group"
+        app:layout_constraintTop_toBottomOf="@id/timeNews"
+        tools:text="We've Seen This Before,
+and It Doesn't End Well" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/descriptionNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:lines="2"
+        android:maxLines="2"
+        android:textColor="@color/textSecondaryColor"
+        android:textSize="14sp"
+        app:fontFamily="@font/avenir_medium"
+        app:layout_constraintTop_toBottomOf="@id/titleNews"
+        tools:text="The war in Yemen is a humanitarian crisis with long-term consequences for the U.S." />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

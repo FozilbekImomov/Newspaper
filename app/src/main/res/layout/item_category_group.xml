@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="231dp"
+    android:layout_height="126dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:focusableInTouchMode="true"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="6dp"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageNewsContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/place_holder" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shadowe_back" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/timeNewsContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:fontFamily="@font/avenir_medium"
+            android:textColor="@color/textSecondaryColorWhite"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@id/titleNewsContent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:text="02 Sep 2019" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleNewsContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/avenir_demi"
+            android:lines="2"
+            android:maxLines="2"
+            android:textColor="@color/primary_text_color_white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="We've Seen This Before,
+and It Doesn't End Well" />
+
+        <FrameLayout
+            android:id="@+id/newsItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:elevation="2dp"
+            android:focusable="true" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

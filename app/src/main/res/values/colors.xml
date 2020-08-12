@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#8430CB</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="background">#FFFFFF</color>
+
+    <color name="black50">#80000000</color>
+    <color name="textSecondaryColor">#686868</color>
+    <color name="primary_text_color">#060606</color>
+    <color name="search_border">#060606</color>
+    <color name="primary_text_color_white">#F3F3F3</color>
+    <color name="textSecondaryColorWhite">#F3F3F3</color>
+</resources>

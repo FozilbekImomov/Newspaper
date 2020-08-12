@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Газета</string>
+    <string name="latest_news">Последние новости</string>
+    <string name="category">Категори</string>
+    <string name="home">Основной</string>
+    <string name="search_hint">Введите все, что хотите</string>
+    <string name="technology">Технология</string>
+    <string name="sport">Sports</string>
+    <string name="science">Наука</string>
+    <string name="health">Здоровье</string>
+    <string name="general">Общее</string>
+    <string name="entertainment">Развлечения</string>
+    <string name="bussiness">Бизнес</string>
+    <string name="all">Все</string>
+    <string name="official_site"><u> Официальный сайт </u></string>
+    <string name="choose_app">Выбрать приложение…</string>
+    <string name="saved_to_favourites">Сохранено в избранное</string>
+    <string name="removed_to_favourites">Удалено из избранного</string>
+    <string name="deleted_all_date">Удалены все данные</string>
+    <string name="saved">Сохраненный</string>
+    <string name="choose_country">Выберите страну</string>
+</resources>

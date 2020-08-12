@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Newspaper</string>
+    <string name="base_url" translatable="false">http://newsapi.org/v2/</string>
+    <string name="latest_news">Latest news</string>
+    <string name="category">Category</string>
+    <string name="home">Home</string>
+    <string name="hilight" translatable="false">HiLight</string>
+    <string name="search_hint">Type everything you want</string>
+    <string name="technology">Technology</string>
+    <string name="sport">Sports</string>
+    <string name="science">Science</string>
+    <string name="health">Health</string>
+    <string name="general">General</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="bussiness">Business</string>
+    <string name="all">All</string>
+    <string name="official_site"><u>Official site</u></string>
+    <string name="choose_app">Choose app …</string>
+    <string name="saved_to_favourites">Saved to favourites</string>
+    <string name="removed_to_favourites">Removed from favourites</string>
+    <string name="deleted_all_date">Deleted all data</string>
+    <string name="saved">Saved</string>
+
+
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="choose_country">Choose country</string>
+    <string name="russion" translatable="false">Россия</string>
+    <string name="united_states" translatable="false">United States</string>
+    <string name="romania" translatable="false">Romania</string>
+    <string name="arab" translatable="false">United Arab Emirates</string>
+    <string name="algeria" translatable="false">Algeria</string>
+    <string name="austria" translatable="false">Austria</string>
+    <string name="australia" translatable="false">Australia</string>
+    <string name="india" translatable="false">India</string>
+    <string name="safrika" translatable="false">Southern Africa</string>
+    <string name="turkish" translatable="false">Turkish</string>
+</resources>

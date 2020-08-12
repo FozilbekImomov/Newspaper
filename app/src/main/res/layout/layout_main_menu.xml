@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="right"
+    android:layout_marginEnd="50dp"
+    android:background="@color/background"
+    android:elevation="8dp">
+
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_close"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/titleFragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/avenir_demi"
+        android:text="@string/choose_country"
+        android:textColor="@color/primary_text_color"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/backButton"
+        app:layout_constraintLeft_toRightOf="@id/backButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/backButton" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleFragment">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/main_menu_style"
+                android:onClick="ChangeLanguage"
+                android:tag="ru"
+                android:text="@string/russion" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/main_menu_style"
+                android:onClick="ChangeLanguage"
+                android:tag="us"
+                android:text="@string/united_states" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/main_menu_style"
+                android:onClick="ChangeLanguage"
+                android:tag="ae"
+                android:text="@string/arab" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/main_menu_style"
+                android:onClick="ChangeLanguage"
+                android:tag="ar"
+                android:text="@string/algeria" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/main_menu_style"
+                android:onClick="ChangeLanguage"
+                android:tag="at"
+                android:text="@string/austria" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/main_menu_style"
+                android:onClick="ChangeLanguage"
+                android:tag="au"
+                android:text="@string/australia" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/main_menu_style"
+                android:onClick="ChangeLanguage"
+                android:tag="in"
+                android:text="@string/india" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/main_menu_style"
+                android:onClick="ChangeLanguage"
+                android:tag="za"
+                android:text="@string/safrika" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/main_menu_style"
+                android:onClick="ChangeLanguage"
+                android:tag="tr"
+                android:text="@string/turkish" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/changeMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="26dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_moon"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
