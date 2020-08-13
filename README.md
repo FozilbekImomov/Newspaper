@@ -40,7 +40,12 @@ Add `MYKEY = "YOUR-API-KEY"`.
 *   User can view and read full content on official web site
 *   Shows a list of news for each category and country
 *   Shows general info for each news
-*   MVVM with Android Architecture Components(Room, LiveData, ViewModel, Dagger, Coroutines)
+*   MVVM 
+*   Room
+*   LiveData 
+*   ViewModel 
+*   Dagger2 
+*   Coroutines
 *   Pagination and endless scrolling using custom pagination.
 *   Handle network status and network failures
 *   ConstraintLayout(guidelines, barriers... etc)
