@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Newspaper</string>
+    <string name="app_name" translatable="false">Global news</string>
     <string name="base_url" translatable="false">http://newsapi.org/v2/</string>
     <string name="latest_news">Latest news</string>
     <string name="category">Category</string>

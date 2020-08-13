@@ -64,6 +64,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/main_menu_style"
+                android:visibility="gone"
                 android:onClick="ChangeLanguage"
                 android:tag="ae"
                 android:text="@string/arab" />
@@ -72,6 +73,7 @@
                 style="@style/main_menu_style"
                 android:onClick="ChangeLanguage"
                 android:tag="ar"
+                android:visibility="gone"
                 android:text="@string/algeria" />
 
             <androidx.appcompat.widget.AppCompatButton

@@ -46,7 +46,7 @@ object NetworkModule {
 
         }
 
-        if (BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG && false) {
             return OkHttpClient
                 .Builder()
                 .addInterceptor(interceptor)
