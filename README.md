@@ -9,11 +9,9 @@ by categories
 ## Screenshots
 
 ![home screen](https://github.com/FozilbekImomov/Newspaper/blob/master/image_2020-08-13_23-47-57.png)
-
 ![categories](https://github.com/FozilbekImomov/Newspaper/blob/master/Mask%20Group%2015.png)
 ### 
 ![search](https://github.com/FozilbekImomov/Newspaper/blob/master/Mask%20Group%2016.png)
-
 ![all news by category](https://github.com/FozilbekImomov/Newspaper/blob/master/Mask%20Group%2017.png)
 ### 
 ![menu](https://github.com/FozilbekImomov/Newspaper/blob/master/Mask%20Group%2018.png)
