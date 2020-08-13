@@ -1,3 +1,3 @@
-[![The Rick and Morty API](https://newsapi.org/)](https://newsapi.org)
+[![The Rick and Morty API](https://newsapi.org/images/splash.png)](https://newsapi.org)
 
 # Newspaper
