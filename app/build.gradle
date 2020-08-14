@@ -52,13 +52,13 @@ android {
     buildTypes {
 
         debug {
-            buildConfigField "String", "MYKEY", "\"3e1826c900e64a469a0d4d919a2b7f0a\""
+            buildConfigField "String", "MYKEY", "\"---\""
             resValue("string", "PORT_NUMBER", "7777")
             minifyEnabled false
         }
 
         release {
-            buildConfigField "String", "MYKEY", "\"3e1826c900e64a469a0d4d919a2b7f0a\""
+            buildConfigField "String", "MYKEY", "\"---\""
 
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
