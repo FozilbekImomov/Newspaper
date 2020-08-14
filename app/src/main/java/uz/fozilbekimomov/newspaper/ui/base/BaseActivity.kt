@@ -7,7 +7,6 @@ import android.view.ContextThemeWrapper
 import android.view.View
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.fragment.app.FragmentManager
 import dagger.android.support.DaggerAppCompatActivity
 import uz.fozilbekimomov.newspaper.core.cache.MyCache
 import uz.fozilbekimomov.newspaper.ui.SplashActivity
@@ -31,9 +30,6 @@ abstract class BaseActivity(
     @LayoutRes
     var layoutId: Int = 0
 
-    lateinit var manager: FragmentManager
-    private var listener: ((String) -> Unit)? = null
-    var listenerLastFragment: ((Int) -> Unit)? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -73,8 +69,6 @@ abstract class BaseActivity(
                 or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
     }
-
-    var listenerHasLogin: ((Boolean) -> Unit)? = null
 
     companion object {
         var dLocale: Locale = Locale(MyCache.getMyCache()!!.getCountry())

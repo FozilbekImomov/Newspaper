@@ -7,7 +7,7 @@ apply plugin: 'kotlin-kapt'
 //apply plugin: 'com.google.firebase.crashlytics'
 
 android {
-   
+
     compileSdkVersion 29
     buildToolsVersion "30.0.0"
 
@@ -34,7 +34,6 @@ android {
         versionName "1.0.0"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-//        signingConfig signingConfigs.release
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = ["room.incremental": "true"]

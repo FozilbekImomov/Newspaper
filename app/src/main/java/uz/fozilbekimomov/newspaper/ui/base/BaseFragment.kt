@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
-import androidx.fragment.app.FragmentManager
 import dagger.android.support.DaggerFragment
 
 
@@ -24,12 +23,6 @@ abstract class BaseFragment(@LayoutRes private val contentLayoutId: Int) : Dagge
     val TAG = "JJJJJ:${this::class.simpleName}"
 
 
-    private val fragments = HashMap<String, BaseFragment>()
-
-    lateinit var manager: FragmentManager
-
-    private var listener: ((String) -> Unit)? = null
-    var listenerLastFragment: ((Int) -> Unit)? = null
 
     @LayoutRes
     var layoutId: Int = 0
@@ -39,7 +32,6 @@ abstract class BaseFragment(@LayoutRes private val contentLayoutId: Int) : Dagge
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        manager = requireActivity().supportFragmentManager
         return inflater.inflate(contentLayoutId, container, false)
     }
 
@@ -50,10 +42,5 @@ abstract class BaseFragment(@LayoutRes private val contentLayoutId: Int) : Dagge
     }
 
     abstract fun onViewCreate()
-
-
-    fun closeActiveFragment() {
-        if (manager.backStackEntryCount > 0) manager.popBackStack()
-    }
 
 }
