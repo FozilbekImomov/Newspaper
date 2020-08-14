@@ -14,6 +14,7 @@ class MyCache private constructor(context: Context) {
 
         private val KEY_COUNTRY = "country"
         private val NIGHT_MODE = "night_mode"
+        private val THEME = "theme"
 
         private var preferences: SharedPreferences? = null
         private var myCache: MyCache? = null
@@ -42,5 +43,12 @@ class MyCache private constructor(context: Context) {
         return preferences?.getBoolean(NIGHT_MODE, false)!!
     }
 
+    fun getTheme(): Long {
+        return preferences?.getLong(THEME, 0L)!!
+    }
+
+    fun saveTheme(themeId: Long) {
+        preferences?.edit()?.putLong(THEME, themeId)?.apply()
+    }
 
 }

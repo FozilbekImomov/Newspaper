@@ -19,4 +19,7 @@
     <string name="deleted_all_date">Удалены все данные</string>
     <string name="saved">Сохраненный</string>
     <string name="choose_country">Выберите страну</string>
+
+    <string name="classicTheme">Классическая тема</string>
+    <string name="nightMode">Ночной режим</string>
 </resources>

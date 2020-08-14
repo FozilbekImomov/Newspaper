@@ -35,4 +35,7 @@
     <string name="india" translatable="false">India</string>
     <string name="safrika" translatable="false">Southern Africa</string>
     <string name="turkish" translatable="false">Turkish</string>
+
+    <string name="classicTheme">Classic Theme</string>
+    <string name="nightMode">Night Mode</string>
 </resources>

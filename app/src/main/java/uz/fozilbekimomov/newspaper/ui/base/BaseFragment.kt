@@ -1,11 +1,16 @@
 package uz.fozilbekimomov.newspaper.ui.base
 
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
+import androidx.core.content.ContextCompat
 import dagger.android.support.DaggerFragment
+import uz.fozilbekimomov.newspaper.core.utils.theme.Theme
+import uz.fozilbekimomov.newspaper.core.utils.theme.ThemeManager
+import javax.inject.Inject
 
 
 /**
@@ -23,6 +28,8 @@ abstract class BaseFragment(@LayoutRes private val contentLayoutId: Int) : Dagge
     val TAG = "JJJJJ:${this::class.simpleName}"
 
 
+    @Inject
+    lateinit var themeManager: ThemeManager
 
     @LayoutRes
     var layoutId: Int = 0
@@ -39,8 +46,20 @@ abstract class BaseFragment(@LayoutRes private val contentLayoutId: Int) : Dagge
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         onViewCreate()
+        notifyThemeChanged()
     }
 
     abstract fun onViewCreate()
+
+
+    protected fun notifyThemeChanged() = onCreateTheme(themeManager.currentTheme)
+
+    open fun onCreateTheme(theme: Theme) {
+        activity?.setTheme(theme.style)
+        // status bar va navigation bar shu yerda control qilinadi.
+        // Activity restart bo'lmasligi uchun flag ishlatish kerak bo'lmasa theme set bo'lmaydi
+        // Bu funksiya kerakli fragmentda override qilib ishlatilaveradi. super.onCreateTheme(theme) bu ni o'chirilmasa bo'ldi
+    }
+
 
 }
