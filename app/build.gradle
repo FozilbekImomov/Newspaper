@@ -7,7 +7,14 @@ apply plugin: 'kotlin-kapt'
 //apply plugin: 'com.google.firebase.crashlytics'
 
 android {
-
+    signingConfigs {
+        release {
+            storeFile file('/Users/fozilbekimomov/AndroidStudioProjects/Newspaper/newspaper.key')
+            storePassword '36945235'
+            keyAlias 'fozilbek'
+            keyPassword '36945235'
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "30.0.0"
 
@@ -34,6 +41,7 @@ android {
         versionName "1.0.0"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = ["room.incremental": "true"]
@@ -44,13 +52,13 @@ android {
     buildTypes {
 
         debug {
-            buildConfigField "String", "MYKEY", "\"____\""
+            buildConfigField "String", "MYKEY", "\"3e1826c900e64a469a0d4d919a2b7f0a\""
             resValue("string", "PORT_NUMBER", "7777")
             minifyEnabled false
         }
 
         release {
-            buildConfigField "String", "MYKEY", "\"____\""
+            buildConfigField "String", "MYKEY", "\"3e1826c900e64a469a0d4d919a2b7f0a\""
 
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'

@@ -9,8 +9,11 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatDelegate
 import dagger.android.support.DaggerAppCompatActivity
 import uz.fozilbekimomov.newspaper.core.cache.MyCache
+import uz.fozilbekimomov.newspaper.core.utils.theme.Theme
+import uz.fozilbekimomov.newspaper.core.utils.theme.ThemeManager
 import uz.fozilbekimomov.newspaper.ui.SplashActivity
 import java.util.*
+import javax.inject.Inject
 
 
 /**
@@ -26,6 +29,10 @@ import java.util.*
 abstract class BaseActivity(
     @LayoutRes private val layoutRes: Int? = null
 ) : DaggerAppCompatActivity() {
+
+
+    @Inject
+    lateinit var themeManager: ThemeManager
 
     @LayoutRes
     var layoutId: Int = 0
@@ -108,6 +115,15 @@ abstract class BaseActivity(
             config,
             baseContext.resources.displayMetrics
         )
+    }
+
+    protected fun notifyThemeChanged() = onCreateTheme(themeManager.currentTheme)
+
+    open fun onCreateTheme(theme: Theme) {
+        setTheme(theme.style)
+        // status bar va navigation bar shu yerda control qilinadi.
+        // Activity restart bo'lmasligi uchun flag ishlatish kerak bo'lmasa theme set bo'lmaydi
+        // Bu funksiya kerakli fragmentda override qilib ishlatilaveradi. super.onCreateTheme(theme) bu ni o'chirilmasa bo'ldi
     }
 
 

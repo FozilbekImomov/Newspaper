@@ -110,7 +110,7 @@ class MainActivity : BaseActivity(R.layout.activity_main) {
 
         changeMode.setOnClickListener {
 
-            val isNight = MyCache.getMyCache()!!.getNightMode()
+//            val isNight = MyCache.getMyCache()!!.getNightMode()
 
 
 //            if (isNight) {
@@ -118,13 +118,13 @@ class MainActivity : BaseActivity(R.layout.activity_main) {
 //            }else{
 //                uiMModeManage.nightMode=UiModeManager.MODE_NIGHT_YES
 //            }
-
-            recreate()
-            MyCache.getMyCache()!!.setNightMode(!isNight)
+            notifyThemeChanged()
+//            recreate()
+//            MyCache.getMyCache()!!.setNightMode(!isNight)
 //            ProcessPhoenix.triggerRebirth(this)
 
 //            setLanguage()
-//           restart()
+            restart()
         }
 
     }
