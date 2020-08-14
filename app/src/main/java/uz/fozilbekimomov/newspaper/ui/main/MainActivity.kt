@@ -1,7 +1,5 @@
 package uz.fozilbekimomov.newspaper.ui.main
 
-import android.app.UiModeManager
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
@@ -106,24 +104,10 @@ class MainActivity : BaseActivity(R.layout.activity_main) {
         }
 
 
-        val uiMModeManage = getSystemService(Context.UI_MODE_SERVICE) as UiModeManager
-
         changeMode.setOnClickListener {
-
-//            val isNight = MyCache.getMyCache()!!.getNightMode()
-
-
-//            if (isNight) {
-//                uiMModeManage.nightMode=UiModeManager.MODE_NIGHT_NO
-//            }else{
-//                uiMModeManage.nightMode=UiModeManager.MODE_NIGHT_YES
-//            }
+            val isNight = MyCache.getMyCache()!!.getNightMode()
             notifyThemeChanged()
-//            recreate()
-//            MyCache.getMyCache()!!.setNightMode(!isNight)
-//            ProcessPhoenix.triggerRebirth(this)
-
-//            setLanguage()
+            MyCache.getMyCache()!!.setNightMode(!isNight)
             restart()
         }
 
